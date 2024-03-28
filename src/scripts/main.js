@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const buttons = document.querySelectorAll('[data-tab-button]');
-    const tabsContainer = document.querySelectorAll('[data-tab-id]');
+    const questions = document.querySelectorAll('[data-faq-question]');
 
     for(let i = 0; i < buttons.length; i++){
         buttons[i].addEventListener('click', function(e){
@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function(){
             buttons[i].classList.add('shows__tabs__button--is-active')
         })
     }
+
+    for(let i = 0; i < questions.length; i++){
+        questions[i].addEventListener('click', abreOuFechaResposta);
+
+    }
+
+
 })
 
 function escondeTodasAbas(){
@@ -27,3 +34,10 @@ function escondeBotaoAtivo(){
         buttons[i].classList.remove('shows__tabs__button--is-active');
     }
 }
+
+function abreOuFechaResposta(e){
+    const classe = 'faq__questions__item--is-open';
+    const elementoPai = e.target.parentNode;
+
+    elementoPai.classList.toggle(classe);
+}   
