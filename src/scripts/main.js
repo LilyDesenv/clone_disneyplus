@@ -36,8 +36,7 @@ document.addEventListener('DOMContentLoaded', function(){
 //função para ocultar elementos do header na rolagem
 function ocultaElementosHeader(){
     const header = document.querySelector('header');
-    console.log(header);
-    header.classList.add('header--is-hidden');
+    header.classList.add('header--is-hidden'); 
 }
 
 //função para exibir elementos do header na rolagem

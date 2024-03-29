@@ -175,8 +175,10 @@
     </section>
 
     <section class="image-text-section  image-text-section--image-full-width">
-        
-        <img src="./dist/images/fundo_rei_leao.png" alt="dispositivos">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png" />
+            <img src="./dist/images/fundo_rei_leao.png" alt="dispositivos">
+        </picture>
         <div class="image-text-section__text_container image-text-section__text_container--image-full-width">
             <h2 class="tittle">Baixe Filmes e Séries</h2>
             <p class="text--big">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis vitae provident consequatur unde aliquam facilis, cumque praesentium, libero quos atque possimus qui quae necessitatibus consequuntur enim illum consectetur ea vero!</p>
@@ -331,6 +333,6 @@
             </p>
         </div>
     </footer>
-    <script src="./src/scripts/main.js"></script>
+    <script src="./dist/js/main.js"></script>
 </body>
 </html>
