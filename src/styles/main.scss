@@ -5,6 +5,7 @@
 @use 'available-devices';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 *{
     margin: 0;
@@ -68,9 +69,35 @@ body{
     text-transform: uppercase;
     border-radius: 4px;
     border: none;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    align-content: center;
     cursor: pointer;
+    border: 1px solid variaveis.$corBotao;
+
+    &:hover{
+        background-color: lighten(variaveis.$corBotao, 3%);
+    }
+
+    &--secondary{
+        background-color: variaveis.$corBotaoSecundario;
+        border-color: variaveis.$corBotaoSecundario;
+
+        &:hover{
+            background-color: lighten(variaveis.$corBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark{
+        background-color: rgba(variaveis.$corBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover{
+            background-color: variaveis.$corBotaoDarkHover;
+            border-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
 .image-text-section{
